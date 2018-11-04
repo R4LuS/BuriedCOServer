@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Security">
+      <UniqueIdentifier>{5b06d938-7e4f-47d4-b768-9d0eec83fc0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party">
+      <UniqueIdentifier>{8dea81e7-ed1c-4410-b49e-cfc18f421e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\big_int">
+      <UniqueIdentifier>{2e9c8c8e-8de1-4289-902a-63bae48b50bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{706c12f6-a991-4168-87b1-43037ac88fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Msg">
+      <UniqueIdentifier>{3c89fc17-eda1-4c9a-8b59-8eef3c3cb7aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="servertest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Security\blowfish.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="Security\cast5.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="Security\diffiehellman.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="Security\rc5.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="Security\tqcipher.cpp">
+      <Filter>Security</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\bigint\bigint_int.c">
+      <Filter>third_party\big_int</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\bigint\bigint_ext.c">
+      <Filter>third_party\big_int</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Msg\MsgConnectEx.cpp">
+      <Filter>Msg</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Msg\Msg.cpp">
+      <Filter>Msg</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="servertest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="session.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="servertest.pro" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Security\blowfish.h">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Security\cast5.h">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Security\diffiehellman.h">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Security\icipher.h">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Security\rc5.h">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="Security\tqcipher.h">
+      <Filter>Security</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\endianness.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\types.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="third_party\bigint\bigint.h">
+      <Filter>third_party\big_int</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Msg\MsgConnectEx.h">
+      <Filter>Msg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Msg\Msg.h">
+      <Filter>Msg</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
