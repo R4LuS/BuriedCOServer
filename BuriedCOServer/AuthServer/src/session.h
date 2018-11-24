@@ -6,11 +6,11 @@
 
 #include "Security/Security/tqcipher.h"
 #include "Security/Security/rc5.h"
-#include "Msg/Msg.h"
-#include "Msg/MsgConnectEx.h"
-#include "Msg/MsgAccount.h"
+#include "MsgPackets/Msg/Msg.h"
+#include "MsgPackets/Msg/MsgConnectEx.h"
+#include "MsgPackets/Msg/MsgAccount.h"
 
-#include "Database/DatabaseLocal.h"
+#include "DatabaseLocal/Database/DatabaseLocal.h"
 
 class session : public QObject
 {

@@ -7,32 +7,12 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Msg\Msg.cpp">
-      <Filter>Msg</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Msg\MsgConnectEx.cpp">
-      <Filter>Msg</Filter>
-    </ClCompile>
     <ClCompile Include="src\BAuthServer.cpp">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Msg\MsgAccount.cpp">
-      <Filter>Msg</Filter>
     </ClCompile>
     <ClCompile Include="src\sessionPacketHandler.cpp">
       <Filter>src</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Msg\MsgConnectEx.h">
-      <Filter>Msg</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Msg\Msg.h">
-      <Filter>Msg</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Msg\MsgAccount.h">
-      <Filter>Msg</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt" />
@@ -44,9 +24,6 @@
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{7b536f20-8196-4272-9097-0c86d929df1d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Msg">
-      <UniqueIdentifier>{b4456739-b5aa-4faa-a3f0-2e5ca86b58b1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

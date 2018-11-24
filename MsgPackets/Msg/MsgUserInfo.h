@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Msg.h"
-#include "src/Player.h"
+#include "BuriedCOServer/GameServer/src/Player.h"
 
 class MsgUserInfo : public Msg 
 {

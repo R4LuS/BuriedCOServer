@@ -167,10 +167,7 @@
   <ItemGroup>
     <ClCompile Include="src\BAuthServer.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Msg\MsgAccount.cpp" />
     <ClCompile Include="src\session.cpp" />
-    <ClCompile Include="src\Msg\Msg.cpp" />
-    <ClCompile Include="src\Msg\MsgConnectEx.cpp" />
     <ClCompile Include="src\sessionPacketHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -202,13 +199,13 @@
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;.\debug;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;.;.\third_party\bigint;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;.\release;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
     </QtMoc>
-    <ClInclude Include="src\Msg\Msg.h" />
-    <ClInclude Include="src\Msg\MsgAccount.h" />
-    <ClInclude Include="src\Msg\MsgConnectEx.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DatabaseLocal\DatabaseLocal.vcxproj">
       <Project>{b12702ad-abfb-343a-a199-8e24837244a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MsgPackets\MsgPackets.vcxproj">
+      <Project>{e4aee03d-a666-44fa-b6ac-bfa1dc0be7f6}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\Security\Security.vcxproj">
       <Project>{d9ebc860-8ee7-4f2d-bc71-de78398cae9d}</Project>

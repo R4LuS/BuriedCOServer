@@ -5,6 +5,7 @@
  * Please read the WARNING, DISCLAIMER and PATENTS
  * sections in the LICENSE file.
  */
+#define _CRT_SECURE_NO_WARNINGS
 
 #include "stringpacker.h"
 #include <string.h>

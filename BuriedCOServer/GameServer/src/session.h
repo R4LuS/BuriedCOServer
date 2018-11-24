@@ -7,7 +7,7 @@
 #include "Security/Security/diffiehellman.h"
 #include "Security/Security/blowfish.h"
 #include "Security/Security/rc5.h"
-#include "Msg/AllMsg.h"
+#include "MsgPackets/Msg/AllMsg.h"
 
 #include "DatabaseLocal/Database/AccountLocal.h"
 
