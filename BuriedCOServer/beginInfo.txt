@@ -1,0 +1,10 @@
+[AUTH]1051[R]
+[AUTH]1055[S]
+[AUTH]1052[R]
+[MSG]ExchangeRequest[S]
+[MSG]ExchangeResponse[R]
+[MSG]1052[R]
+
+
+
+Dragon city id: 1002

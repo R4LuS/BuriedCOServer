@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Common/endianness.h"
+#include "endianness.h"
 
 #ifdef _WIN32
 #define NOMINMAX // want std::min() & std::max() defined...

@@ -24,11 +24,9 @@ void session::handle_data()
 	
 	QByteArray buf = socket->readAll();
 	uint8_t *readed = new uint8_t[buf.length()];
-	fprintf(stdout, "[RECV]Size:%d\n", buf.length());
 	memcpy(readed, reinterpret_cast<unsigned char*>(buf.data()), buf.length());
 	cipher->decrypt(readed, buf.length());
 	if (status == KEY_EXCHANGE) {
-		fprintf(stdout, "[KEYEXCHANGE]\n");
 		handleExchangeResponse(readed, buf.length());
 		status = NORMAL;
 	}
@@ -68,15 +66,12 @@ void session::generateExchangeRequest() {
 	std::string pubKey = mExchange->generateRequest();
 	mEncryptIV = new uint8_t[Blowfish::BLOCK_SIZE];
 	mDecryptIV = new uint8_t[Blowfish::BLOCK_SIZE];
-	fprintf(stdout, "[KEYEXCHANGE]Memory reserved, pub key created...\n");
 	for (int32_t i = 0; i < Blowfish::BLOCK_SIZE; ++i)
 	{
 		mEncryptIV[i] = (uint8_t)(rand() - rand());
 		mDecryptIV[i] = (uint8_t)(rand() + rand());
 	}
-	fprintf(stdout, "[KEYEXCHANGE]Generated IV...\n");
 	MsgLoginProofA *msg = new MsgLoginProofA(mEncryptIV, mDecryptIV, P, G, pubKey);
-	fprintf(stdout, "[KEYEXCHANGE]Created msg...\n");
 	send(msg);
 }
 
@@ -91,7 +86,6 @@ void session::handleExchangeResponse(uint8_t* aBuf, size_t aLen)
 	int bsize = (int)aLen - 15 - someData->JunkSize - 8;
 	int binit = 19 + someData->JunkSize;
 	char *publicKey = new char[bsize + 1];
-	fprintf(stdout, "[KEYEXCHANGE-RES]Size:%d %d\n", bsize, binit);
 	int i = 0;
 	for (i = binit; i < (int)aLen - 8; i++) {
 		publicKey[i - binit] = aBuf[i];
@@ -99,7 +93,6 @@ void session::handleExchangeResponse(uint8_t* aBuf, size_t aLen)
 	publicKey[i - binit] = '\0';
 	std::string s_key = mExchange->handleResponse(reinterpret_cast<char *>(publicKey));
 
-	fprintf(stdout, "[KEYESCHANGE-RES]Key s generated...\n");
 	std::vector<char> seed = HexToBytes(s_key);
 	cipher->generateKey((uint8_t *)seed.data(), seed.size());
 	cipher->setIVs(mEncryptIV, mDecryptIV);
