@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Msg.h"
-#include "../../Security/blowfish.h"
+#include "Security/Security/blowfish.h"
 
 #include <iostream>
 #include <ctime>

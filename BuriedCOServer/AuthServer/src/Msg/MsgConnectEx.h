@@ -1,8 +1,8 @@
 ﻿#pragma once
 
 #include "Msg.h"
-#include "../Common/common.h"
-#include "./Common/endianness.h"
+#include "Common/common.h"
+#include "Common/endianness.h"
 
 class MsgConnectEx : public Msg
 {

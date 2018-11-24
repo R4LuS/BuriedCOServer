@@ -7,17 +7,8 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Security\tqcipher.cpp">
-      <Filter>Security</Filter>
-    </ClCompile>
     <ClCompile Include="src\BGameServer.cpp">
       <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="Security\diffiehellman.cpp">
-      <Filter>Security</Filter>
-    </ClCompile>
-    <ClCompile Include="Security\blowfish.cpp">
-      <Filter>Security</Filter>
     </ClCompile>
     <ClCompile Include="src\third\stringpacker.cpp">
       <Filter>src\third</Filter>
@@ -64,32 +55,8 @@
     <ClCompile Include="src\Msg\MsgRegister.cpp">
       <Filter>Msg\src</Filter>
     </ClCompile>
-    <ClCompile Include="Security\rc5.cpp">
-      <Filter>Security</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Security\tqcipher.h">
-      <Filter>Security</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\endianness.h">
-      <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="Security\icipher.h">
-      <Filter>Security</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\common.h">
-      <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\types.h">
-      <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="Security\diffiehellman.h">
-      <Filter>Security</Filter>
-    </ClInclude>
-    <ClInclude Include="Security\blowfish.h">
-      <Filter>Security</Filter>
-    </ClInclude>
     <ClInclude Include="src\third\stringpacker.h">
       <Filter>src\third</Filter>
     </ClInclude>
@@ -135,9 +102,6 @@
     <ClInclude Include="src\Msg\AllMsg.h">
       <Filter>Msg</Filter>
     </ClInclude>
-    <ClInclude Include="Security\rc5.h">
-      <Filter>Security</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt" />
@@ -149,12 +113,6 @@
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{7b536f20-8196-4272-9097-0c86d929df1d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Security">
-      <UniqueIdentifier>{b7052336-92ae-4a5f-93cf-165cdb021af2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="common">
-      <UniqueIdentifier>{6539c67c-45b8-48a5-8e65-99974853dd1a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Msg">
       <UniqueIdentifier>{b4456739-b5aa-4faa-a3f0-2e5ca86b58b1}</UniqueIdentifier>

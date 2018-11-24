@@ -4,11 +4,11 @@
 #include <QObject>
 #include <QTcpSocket>
 
-#include "Security/tqcipher.h"
+#include "Security/Security/tqcipher.h"
+#include "Security/Security/rc5.h"
 #include "Msg/Msg.h"
 #include "Msg/MsgConnectEx.h"
 #include "Msg/MsgAccount.h"
-#include "Security/rc5.h"
 
 #include "Database/DatabaseLocal.h"
 

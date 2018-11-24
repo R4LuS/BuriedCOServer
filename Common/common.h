@@ -1,6 +1,7 @@
 #pragma once
 
 #include "endianness.h"
+#include "assert.h"
 
 #ifdef _WIN32
 #define NOMINMAX // want std::min() & std::max() defined...
@@ -34,9 +35,6 @@ using int32_t = int;
 
 // Assert an expression and return if false
 #define ASSERT(exp)                          \
-    if (!(exp)) { }
-
-#define assert(exp)                          \
     if (!(exp)) { }
 
 // Assert an expression and return the error if false

@@ -3,10 +3,10 @@
 #include <QObject>
 #include <QTcpSocket>
 
-#include "Security/tqcipher.h"
-#include "Security/diffiehellman.h"
-#include "Security/blowfish.h"
-#include "Security/rc5.h"
+#include "Security/Security/tqcipher.h"
+#include "Security/Security/diffiehellman.h"
+#include "Security/Security/blowfish.h"
+#include "Security/Security/rc5.h"
 #include "Msg/AllMsg.h"
 
 #include "Database/AccountLocal.h"

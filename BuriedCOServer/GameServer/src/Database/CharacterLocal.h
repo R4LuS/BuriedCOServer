@@ -32,5 +32,4 @@ private:
 	uint16_t life;
 	uint16_t mana;
 	uint16_t mapID;
-	uint16_t 
 };
