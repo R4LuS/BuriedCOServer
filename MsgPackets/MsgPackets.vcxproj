@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Msg\AllMsg.h" />
     <ClInclude Include="Msg\Msg.h" />
+    <ClInclude Include="Msg\MsgAccount.h" />
     <ClInclude Include="Msg\MsgConnect.h" />
     <ClInclude Include="Msg\MsgConnectEx.h" />
     <ClInclude Include="Msg\MsgDate.h" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Msg\Msg.cpp" />
+    <ClCompile Include="Msg\MsgAccount.cpp" />
     <ClCompile Include="Msg\MsgConnect.cpp" />
     <ClCompile Include="Msg\MsgConnectEx.cpp" />
     <ClCompile Include="Msg\MsgDate.cpp" />
