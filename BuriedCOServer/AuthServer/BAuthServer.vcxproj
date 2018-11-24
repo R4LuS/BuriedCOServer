@@ -139,7 +139,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Cored.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\OpenSSL-Win64\lib;C:\Users\Raul\Desktop\BuriedCOServer\Security\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\OpenSSL-Win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -166,9 +166,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\BAuthServer.cpp" />
-    <ClCompile Include="src\Database\AccountLocal.cpp" />
-    <ClCompile Include="src\Database\CharacterLocal.cpp" />
-    <ClCompile Include="src\Database\DatabaseLocal.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Msg\MsgAccount.cpp" />
     <ClCompile Include="src\session.cpp" />
@@ -205,14 +202,14 @@
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;.\debug;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;.;.\third_party\bigint;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;.\release;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
     </QtMoc>
-    <ClInclude Include="src\Database\AccountLocal.h" />
-    <ClInclude Include="src\Database\CharacterLocal.h" />
-    <ClInclude Include="src\Database\DatabaseLocal.h" />
     <ClInclude Include="src\Msg\Msg.h" />
     <ClInclude Include="src\Msg\MsgAccount.h" />
     <ClInclude Include="src\Msg\MsgConnectEx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DatabaseLocal\DatabaseLocal.vcxproj">
+      <Project>{b12702ad-abfb-343a-a199-8e24837244a3}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\Security\Security.vcxproj">
       <Project>{d9ebc860-8ee7-4f2d-bc71-de78398cae9d}</Project>
     </ProjectReference>

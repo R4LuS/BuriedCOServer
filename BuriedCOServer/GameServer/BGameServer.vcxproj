@@ -135,7 +135,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Cored.lib;libeay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\Security\x64\Debug;$(QTDIR)\lib;C:\OpenSSL-Win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\OpenSSL-Win64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -162,9 +162,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\BGameServer.cpp" />
-    <ClCompile Include="src\Database\AccountLocal.cpp" />
-    <ClCompile Include="src\Database\CharacterLocal.cpp" />
-    <ClCompile Include="src\Database\DatabaseLocal.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Msg\MsgConnect.cpp" />
     <ClCompile Include="src\Msg\MsgDate.cpp" />
@@ -205,9 +202,6 @@
     <QtMoc Include="src\session.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Database\AccountLocal.h" />
-    <ClInclude Include="src\Database\CharacterLocal.h" />
-    <ClInclude Include="src\Database\DatabaseLocal.h" />
     <ClInclude Include="src\Msg\AllMsg.h" />
     <ClInclude Include="src\Msg\MsgConnect.h" />
     <ClInclude Include="src\Msg\MsgDate.h" />
@@ -226,6 +220,9 @@
     <ClInclude Include="src\Msg\MsgLoginProofA.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DatabaseLocal\DatabaseLocal.vcxproj">
+      <Project>{b12702ad-abfb-343a-a199-8e24837244a3}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\Security\Security.vcxproj">
       <Project>{d9ebc860-8ee7-4f2d-bc71-de78398cae9d}</Project>
     </ProjectReference>

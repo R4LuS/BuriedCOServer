@@ -8,7 +8,7 @@
 
 #include "session.h"
 
-#include "Database/DatabaseLocal.h"
+#include "DatabaseLocal/Database/DatabaseLocal.h"
 
 class BGameServer : public QObject
 {

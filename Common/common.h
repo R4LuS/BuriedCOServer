@@ -1,11 +1,11 @@
 #pragma once
 
 #include "endianness.h"
-#include "assert.h"
 
 #ifdef _WIN32
 #define NOMINMAX // want std::min() & std::max() defined...
 #include <windows.h>
+#include "assert.h"
 
 #ifdef _MSC_VER // Visual Studio will complain for linking...
 #pragma comment(lib, "WinMM") // for timeGetTime()

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-genprime_getdata | genprime_graphdata | ssh gate xgraph

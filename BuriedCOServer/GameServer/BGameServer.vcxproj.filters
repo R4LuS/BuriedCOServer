@@ -40,15 +40,6 @@
     <ClCompile Include="src\sessionPacketHandler.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Database\AccountLocal.cpp">
-      <Filter>Database</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Database\CharacterLocal.cpp">
-      <Filter>Database</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Database\DatabaseLocal.cpp">
-      <Filter>Database</Filter>
-    </ClCompile>
     <ClCompile Include="src\Msg\MsgConnect.cpp">
       <Filter>Msg\src</Filter>
     </ClCompile>
@@ -84,15 +75,6 @@
     <ClInclude Include="src\Player.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Database\AccountLocal.h">
-      <Filter>Database</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Database\CharacterLocal.h">
-      <Filter>Database</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Database\DatabaseLocal.h">
-      <Filter>Database</Filter>
-    </ClInclude>
     <ClInclude Include="src\Msg\MsgConnect.h">
       <Filter>Msg\header</Filter>
     </ClInclude>
@@ -125,9 +107,6 @@
     </Filter>
     <Filter Include="Msg\header">
       <UniqueIdentifier>{9ada1001-487c-4ebd-92b4-5343c0fe03df}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Database">
-      <UniqueIdentifier>{8e1bbeb6-2cf9-4964-b0e5-622a5bd0f51a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

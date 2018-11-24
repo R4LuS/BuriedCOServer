@@ -34,6 +34,7 @@ public:
 		uint8_t buf[1];
 	}MsgInfo;
 #pragma pack(pop)
+
 public:
 	MsgUserInfo(Player *);
 
@@ -43,5 +44,4 @@ public:
 private:
 	MsgInfo *data;
 	uint16_t size;
-
 };
