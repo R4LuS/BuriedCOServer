@@ -14,7 +14,7 @@ MsgUserInfo::MsgUserInfo() :
 	data->hairstyle = 535;
 	data->silver = 10000;
 	data->cps = 10000;
-	data->experience = 0;
+	data->experience = 1;
 	data->strength = 5;
 	data->agility = 5;
 	data->vitality = 5;
@@ -30,7 +30,7 @@ MsgUserInfo::MsgUserInfo() :
 	data->showname = 1;
 
 	memset(data->padding, 0, sizeof(data->padding));
-
+	data->buf[0] = 0;
 	StringPacker packer(data->buf);
 	packer.addString("Test");
 	packer.addString("None");

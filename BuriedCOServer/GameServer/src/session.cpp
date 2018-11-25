@@ -34,13 +34,15 @@ void session::handle_data()
 		Msg::Header *incomePacketInfo = new Msg::Header;
 		incomePacketInfo = (Msg::Header *)readed;
 		fprintf(stdout, "[PACKETINFO]Size: %d PacketID: %d \n", incomePacketInfo->packetSize, incomePacketInfo->packetID);
-		Msg *msg;
 		switch (incomePacketInfo->packetID) {
 		case 1001:
 			handler_1001((MsgRegister::MsgInfo *)readed);
 			break;
 		case 1052:
 			handler_1052((MsgConnect::MsgInfo *)readed);
+			break;
+		case 1010:
+			handler_1010((MsgAction::MsgInfo *)readed);
 			break;
 		default:
 			break;

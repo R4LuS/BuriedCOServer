@@ -10,3 +10,4 @@
 #include "MsgUserInfo.h"
 #include "MsgRegister.h"
 #include "MsgDate.h"
+#include "MsgAction.h"

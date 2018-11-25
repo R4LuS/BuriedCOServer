@@ -17,7 +17,7 @@ public:
 		uint32_t silver;
 		uint32_t cps;
 		uint64_t experience;
-		uint16_t padding[20];
+		uint8_t padding[20];
 		uint16_t strength;
 		uint16_t agility;
 		uint16_t vitality;

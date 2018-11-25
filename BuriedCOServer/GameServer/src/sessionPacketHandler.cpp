@@ -64,3 +64,15 @@ void session::handler_1052(MsgConnect::MsgInfo *stData)
 	/* Load player magic skills */
 
 }
+
+void session::handler_1010(MsgAction::MsgInfo *stData) {
+	fprintf(stdout, "[ACTION]%d\n", stData->action);
+	if (stData->action == 74) {
+		stData->posX = 200;
+		stData->posY = 200;
+		stData->data = 1010;
+		stData->direction = 1;
+		send(new MsgAction(stData));
+	}
+	
+}
