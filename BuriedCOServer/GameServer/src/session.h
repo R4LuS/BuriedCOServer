@@ -40,10 +40,12 @@ public slots:
 private: //packet handler
 	/* MsgRegister */
 	void handler_1001(MsgRegister::MsgInfo *);
-	/* MsgConnect */
-	void handler_1052(MsgConnect::MsgInfo *);
+	/* MsgItem */
+	void handler_1009(MsgItem::MsgInfo *);
 	/* MsgAction */
 	void handler_1010(MsgAction::MsgInfo *);
+	/* MsgConnect */
+	void handler_1052(MsgConnect::MsgInfo *);
 
 
 

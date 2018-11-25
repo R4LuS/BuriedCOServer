@@ -11,3 +11,4 @@
 #include "MsgRegister.h"
 #include "MsgDate.h"
 #include "MsgAction.h"
+#include "MsgItem.h"

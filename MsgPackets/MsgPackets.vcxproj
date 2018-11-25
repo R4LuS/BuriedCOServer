@@ -26,6 +26,7 @@
     <ClInclude Include="Msg\MsgConnect.h" />
     <ClInclude Include="Msg\MsgConnectEx.h" />
     <ClInclude Include="Msg\MsgDate.h" />
+    <ClInclude Include="Msg\MsgItem.h" />
     <ClInclude Include="Msg\MsgLoginChallengeS.h" />
     <ClInclude Include="Msg\MsgLoginProofA.h" />
     <ClInclude Include="Msg\MsgRegister.h" />
@@ -39,6 +40,7 @@
     <ClCompile Include="Msg\MsgConnect.cpp" />
     <ClCompile Include="Msg\MsgConnectEx.cpp" />
     <ClCompile Include="Msg\MsgDate.cpp" />
+    <ClCompile Include="Msg\MsgItem.cpp" />
     <ClCompile Include="Msg\MsgLoginChallengeS.cpp" />
     <ClCompile Include="Msg\MsgLoginProofA.cpp" />
     <ClCompile Include="Msg\MsgRegister.cpp" />

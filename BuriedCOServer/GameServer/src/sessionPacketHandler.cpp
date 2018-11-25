@@ -22,6 +22,33 @@ void session::handler_1001(MsgRegister::MsgInfo *stData)
 	send(msg);
 }
 
+void session::handler_1009(MsgItem::MsgInfo *stData) {
+	switch (stData->action) {
+		case MsgItem::ACTION_BUY:
+			break;
+		case MsgItem::ACTION_COMPLETE_TASK:
+			send(new MsgItem(stData));
+			break;
+		default:
+			break;
+	}
+}
+
+void session::handler_1010(MsgAction::MsgInfo *stData) {
+	switch (stData->action) {
+		case MsgAction::ACTION_ENTER_MAP:
+			stData->posX = 200;
+			stData->posY = 200;
+			stData->data = 1010;
+			stData->direction = 1;
+			send(new MsgAction(stData));
+			break;
+		default:
+			break;
+	}
+
+}
+
 void session::handler_1052(MsgConnect::MsgInfo *stData) 
 {
 	Msg *msg;
@@ -53,9 +80,13 @@ void session::handler_1052(MsgConnect::MsgInfo *stData)
 
 	/* Send some info creator/build */
 	// MsgTalk()
+	msg = new MsgTalk(STR_SYSTEM_NAME, STR_ALLUSERS_NAME, "BuriedCO-v4", MsgTalk::CHANNEL_TALK);
+	send(msg);
 
 	/* Send server info */
-	// MsgTalk()
+	// MsgTalk
+	msg = new MsgTalk(STR_SYSTEM_NAME, STR_ALLUSERS_NAME, "Build for windows, with qt", MsgTalk::CHANNEL_TALK);
+	send(msg);
 
 	/* Load player items */
 
@@ -65,14 +96,3 @@ void session::handler_1052(MsgConnect::MsgInfo *stData)
 
 }
 
-void session::handler_1010(MsgAction::MsgInfo *stData) {
-	fprintf(stdout, "[ACTION]%d\n", stData->action);
-	if (stData->action == 74) {
-		stData->posX = 200;
-		stData->posY = 200;
-		stData->data = 1010;
-		stData->direction = 1;
-		send(new MsgAction(stData));
-	}
-	
-}

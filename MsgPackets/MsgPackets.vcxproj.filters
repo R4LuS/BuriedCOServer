@@ -51,6 +51,9 @@
     <ClInclude Include="Msg\MsgAction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Msg\MsgItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Msg\Msg.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Msg\MsgAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Msg\MsgItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

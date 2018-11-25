@@ -38,12 +38,16 @@ void session::handle_data()
 		case 1001:
 			handler_1001((MsgRegister::MsgInfo *)readed);
 			break;
-		case 1052:
-			handler_1052((MsgConnect::MsgInfo *)readed);
+		case 1009:
+			handler_1009((MsgItem::MsgInfo *)readed);
 			break;
 		case 1010:
 			handler_1010((MsgAction::MsgInfo *)readed);
 			break;
+		case 1052:
+			handler_1052((MsgConnect::MsgInfo *)readed);
+			break;
+		
 		default:
 			break;
 		}
