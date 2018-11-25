@@ -36,6 +36,7 @@ public:
 #pragma pack(pop)
 
 public:
+	MsgUserInfo();
 	MsgUserInfo(Player *);
 
 	uint8_t *getInfo() { return (uint8_t *)data; }

@@ -7,7 +7,7 @@
 #include <QDebug>
 
 #include "session.h"
-#include "Database/DatabaseLocal.h"
+#include "DatabaseLocal/Database/DatabaseLocal.h"
 
 class BAuthServer : public QObject
 {

@@ -32,7 +32,7 @@ void session::handler_1052(MsgConnect::MsgInfo *stData)
 		return;
 	}
 
-	if (account->getCharacter() == nullptr) {
+	if (account->getCharacter() != nullptr) {
 		/* Create character msg */
 		msg = new MsgTalk(STR_SYSTEM_NAME, STR_ALLUSERS_NAME, STR_REPLY_NEW_ROLE, MsgTalk::CHANNEL_ENTRANCE);
 	}
@@ -42,12 +42,20 @@ void session::handler_1052(MsgConnect::MsgInfo *stData)
 	}
 	send(msg);
 
+	// MsgDate()
+	msg = new MsgDate();
+	send(msg);
 
 	/* Send player data */
+	// MsgUserInfo()	
+	msg = new MsgUserInfo();
+	send(msg);
 
 	/* Send some info creator/build */
+	// MsgTalk()
 
 	/* Send server info */
+	// MsgTalk()
 
 	/* Load player items */
 

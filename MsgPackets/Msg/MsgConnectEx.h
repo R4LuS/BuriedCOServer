@@ -32,11 +32,12 @@ public:
 	MsgConnectEx(uint32_t clientId, uint32_t port, uint8_t *ipAdress);
 	MsgConnectEx(uint32_t errorCode);
 	uint8_t *getInfo() { return (uint8_t *)data; }
+	uint16_t getSize() { return size; }
 	uint8_t *getError() { return (uint8_t *)errData; }
 
 private:
 	mInfo *data;
-
+	uint16_t size;
 	mError *errData;
 	
 };

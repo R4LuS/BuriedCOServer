@@ -27,9 +27,10 @@ MsgConnectEx::MsgConnectEx(uint32_t clientId, uint32_t port, uint8_t *ipAdress) 
 	data->header.packetSize = sizeof(mInfo);
 	data->header.packetID = 1055;
 	data->clientId = clientId;
-	data->authCode = 2;
+	data->authCode = 100000;
 	data->port = port;
 	memcpy(data->ipAdress, ipAdress, 16);
+	this->size = sizeof(mInfo);
 }
 
 MsgConnectEx::MsgConnectEx(uint32_t errorCode) :
@@ -37,19 +38,5 @@ MsgConnectEx::MsgConnectEx(uint32_t errorCode) :
 {
 	errData = new mError;
 	errData->code = errorCode;
-	errData->size = 28;
-	switch (errorCode) {
-		case 1:
-			memcpy(errData->message, MSGCONNECTEX_INVALID_ACCOUNT, 16);
-			break;
-		case 10:
-			memcpy(errData->message, MSGCONNECTEX_SERVER_DOWN, 12);
-			break;
-		case 11:
-			memcpy(errData->message, MSGCONNECTEX_LOGIN_LATER, 16);
-			break;
-		case 12:
-			memcpy(errData->message, MSGCONNECTEX_BANNED_ACCOUNT, 16);
-			break;
-	}
+	errData->size = 32;
 }

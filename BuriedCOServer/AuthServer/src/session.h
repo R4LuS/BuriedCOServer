@@ -20,7 +20,7 @@ public:
 	~session();
 
 	ICipher *get_cipher() { return this->cipher; }
-	void send(MsgConnectEx *msg);
+	void send(Msg *msg);
 
 signals:
 
