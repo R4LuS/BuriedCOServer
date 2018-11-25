@@ -3,13 +3,13 @@
 #include <QObject>
 #include <QTcpSocket>
 
-#include "Security/tqcipher.h"
-#include "Security/diffiehellman.h"
-#include "Security/blowfish.h"
-#include "Security/rc5.h"
-#include "Msg/AllMsg.h"
+#include "Security/Security/tqcipher.h"
+#include "Security/Security/diffiehellman.h"
+#include "Security/Security/blowfish.h"
+#include "Security/Security/rc5.h"
+#include "MsgPackets/Msg/AllMsg.h"
 
-#include "Database/AccountLocal.h"
+#include "DatabaseLocal/Database/AccountLocal.h"
 
 class session : public QObject
 {
@@ -38,7 +38,9 @@ public slots:
 
 
 private: //packet handler
+	/* MsgRegister */
 	void handler_1001(MsgRegister::MsgInfo *);
+	/* MsgConnect */
 	void handler_1052(MsgConnect::MsgInfo *);
 
 

@@ -115,7 +115,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;debug;$(QTDIR)\mkspecs\win32-msvc;C:\OpenSSL-Win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;debug;$(QTDIR)\mkspecs\win32-msvc;C:\OpenSSL-Win64\include;..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -156,33 +156,16 @@
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
       <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
-      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;debug;$(QTDIR)\mkspecs\win32-msvc;C:\OpenSSL-Win64\include;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;debug;$(QTDIR)\mkspecs\win32-msvc;C:\OpenSSL-Win64\include;..\..;%(AdditionalIncludeDirectories)</IncludePath>
       <Define>_CONSOLE;UNICODE;_UNICODE;WIN32;WIN64;QT_DEPRECATED_WARNINGS;QT_NETWORK_LIB;QT_CORE_LIB</Define>
     </QtMoc>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Security\blowfish.cpp" />
-    <ClCompile Include="Security\diffiehellman.cpp" />
-    <ClCompile Include="Security\rc5.cpp" />
     <ClCompile Include="src\BGameServer.cpp" />
-    <ClCompile Include="src\Database\AccountLocal.cpp" />
-    <ClCompile Include="src\Database\CharacterLocal.cpp" />
-    <ClCompile Include="src\Database\DatabaseLocal.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="Security\tqcipher.cpp" />
-    <ClCompile Include="src\Msg\MsgConnect.cpp" />
-    <ClCompile Include="src\Msg\MsgDate.cpp" />
-    <ClCompile Include="src\Msg\MsgLoginChallengeS.cpp" />
-    <ClCompile Include="src\Msg\MsgLoginProofA.cpp" />
-    <ClCompile Include="src\Msg\MsgRegister.cpp" />
-    <ClCompile Include="src\Msg\MsgTalk.cpp" />
-    <ClCompile Include="src\Msg\MsgUserInfo.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\session.cpp" />
-    <ClCompile Include="src\Msg\Msg.cpp" />
-    <ClCompile Include="src\Msg\MsgConnectEx.cpp" />
     <ClCompile Include="src\sessionPacketHandler.cpp" />
-    <ClCompile Include="src\third\stringpacker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
@@ -209,33 +192,25 @@
     <QtMoc Include="src\session.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Common\common.h" />
-    <ClInclude Include="Common\endianness.h" />
-    <ClInclude Include="Common\types.h" />
-    <ClInclude Include="Security\blowfish.h" />
-    <ClInclude Include="Security\diffiehellman.h" />
-    <ClInclude Include="Security\icipher.h" />
-    <ClInclude Include="Security\rc5.h" />
-    <ClInclude Include="Security\tqcipher.h" />
-    <ClInclude Include="src\Database\AccountLocal.h" />
-    <ClInclude Include="src\Database\CharacterLocal.h" />
-    <ClInclude Include="src\Database\DatabaseLocal.h" />
-    <ClInclude Include="src\Msg\AllMsg.h" />
-    <ClInclude Include="src\Msg\MsgConnect.h" />
-    <ClInclude Include="src\Msg\MsgDate.h" />
-    <ClInclude Include="src\Msg\MsgRegister.h" />
-    <ClInclude Include="src\Msg\MsgTalk.h" />
-    <ClInclude Include="src\Msg\MsgUserInfo.h" />
     <ClInclude Include="src\Player.h" />
-    <ClInclude Include="src\third\stringpacker.h" />
     <QtMoc Include="src\BGameServer.h">
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;.\debug;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\.;.\GeneratedFiles;.;.\third_party\bigint;$(QTDIR)\include;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtCore;.\release;$(QTDIR)\mkspecs\win32-msvc</IncludePath>
     </QtMoc>
-    <ClInclude Include="src\Msg\Msg.h" />
-    <ClInclude Include="src\Msg\MsgConnectEx.h" />
-    <ClInclude Include="src\Msg\MsgLoginChallengeS.h" />
-    <ClInclude Include="src\Msg\MsgLoginProofA.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DatabaseLocal\DatabaseLocal.vcxproj">
+      <Project>{b12702ad-abfb-343a-a199-8e24837244a3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MsgPackets\MsgPackets.vcxproj">
+      <Project>{e4aee03d-a666-44fa-b6ac-bfa1dc0be7f6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Security\Security.vcxproj">
+      <Project>{d9ebc860-8ee7-4f2d-bc71-de78398cae9d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ThirdParty\ThirdParty.vcxproj">
+      <Project>{c206d99a-bdb6-4ab6-a37a-0f29ef3ac5ca}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

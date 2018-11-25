@@ -13,6 +13,7 @@ public:
 	}MsgInfo;
 
 public:
+	MsgAccount();
 	MsgAccount(uint8_t *);
 
 	MsgInfo *getData() { return data; }

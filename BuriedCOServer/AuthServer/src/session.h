@@ -4,13 +4,13 @@
 #include <QObject>
 #include <QTcpSocket>
 
-#include "Security/tqcipher.h"
-#include "Msg/Msg.h"
-#include "Msg/MsgConnectEx.h"
-#include "Msg/MsgAccount.h"
-#include "Security/rc5.h"
+#include "Security/Security/tqcipher.h"
+#include "Security/Security/rc5.h"
+#include "MsgPackets/Msg/Msg.h"
+#include "MsgPackets/Msg/MsgConnectEx.h"
+#include "MsgPackets/Msg/MsgAccount.h"
 
-#include "Database/DatabaseLocal.h"
+#include "DatabaseLocal/Database/DatabaseLocal.h"
 
 class session : public QObject
 {
@@ -20,7 +20,7 @@ public:
 	~session();
 
 	ICipher *get_cipher() { return this->cipher; }
-	void send(MsgConnectEx *msg);
+	void send(Msg *msg);
 
 signals:
 

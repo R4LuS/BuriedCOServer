@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Msg.h"
-#include "src/third/stringpacker.h"
+#include "ThirdParty/third/stringpacker.h"
 
 const size_t MAX_NAMESIZE = 16;
 const size_t MAX_WORDSSIZE = 255;
@@ -104,14 +104,11 @@ public:
 	/*MsgTalk(const Player& aSpeaker, const Player& aHearer, const char* aWords,
 		Channel aChannel, uint32_t aColor = COLOR_WHITE);*/
 
-
-
-
 	uint8_t *getInfo() { return (uint8_t *)mInfo; }
 	uint16_t getSize() { return size; }
 
 private:
-	void MsgTalk::create(const char* aSpeaker, const char* aHearer, const char* aEmotion,
+	void create(const char* aSpeaker, const char* aHearer, const char* aEmotion,
 			const char* aWords, Channel aChannel, uint32_t aColor);
 
 private:

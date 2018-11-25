@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Msg.h"
-#include "src/Player.h"
+#include "BuriedCOServer/GameServer/src/Player.h"
 
 class MsgUserInfo : public Msg 
 {
@@ -34,7 +34,9 @@ public:
 		uint8_t buf[1];
 	}MsgInfo;
 #pragma pack(pop)
+
 public:
+	MsgUserInfo();
 	MsgUserInfo(Player *);
 
 	uint8_t *getInfo() { return (uint8_t *)data; }
@@ -43,5 +45,4 @@ public:
 private:
 	MsgInfo *data;
 	uint16_t size;
-
 };

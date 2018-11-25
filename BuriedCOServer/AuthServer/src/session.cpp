@@ -53,12 +53,13 @@ static const size_t SEAL_LEN = strlen(SEAL);
 
 
 
-void session::send(MsgConnectEx *msg) 
+void session::send(Msg *msg) 
 {
 	const size_t finalLen = msg->getSize() + SEAL_LEN;
 	uint8_t *msgToSend = new uint8_t[finalLen];
 	memcpy(msgToSend, msg->getInfo(), msg->getSize());
 	memcpy(msgToSend + msg->getSize(), SEAL, SEAL_LEN);
+	fprintf(stdout, "[SEND] Size: %d\n", msg->getSize());
 	cipher->encrypt(msgToSend, finalLen);
 	socket->write(QByteArray(reinterpret_cast<char *>(msgToSend), finalLen));
 	SAFEDELETE(msgToSend);
