@@ -41,5 +41,9 @@
     <ClInclude Include="Database\DatabaseLocal.h">
       <Filter>DatabaseLocal</Filter>
     </ClInclude>
+    <ClInclude Include="databaselocal_global.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseLocal.pro" />
   </ItemGroup>
 </Project>

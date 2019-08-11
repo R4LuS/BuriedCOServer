@@ -54,6 +54,12 @@
     <ClInclude Include="Msg\MsgItem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Msg\MsgPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Msg\MsgWalk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Msg\Msg.cpp">
@@ -90,6 +96,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Msg\MsgItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Msg\MsgPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Msg\MsgWalk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

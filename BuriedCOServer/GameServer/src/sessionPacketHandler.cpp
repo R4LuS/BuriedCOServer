@@ -30,6 +30,7 @@ void session::handler_1009(MsgItem::MsgInfo *stData) {
 			send(new MsgItem(stData));
 			break;
 		default:
+			fprintf(stdout, "[ITEMACTION]Unknown item action-%d\n", stData->action);
 			break;
 	}
 }
@@ -37,13 +38,21 @@ void session::handler_1009(MsgItem::MsgInfo *stData) {
 void session::handler_1010(MsgAction::MsgInfo *stData) {
 	switch (stData->action) {
 		case MsgAction::ACTION_ENTER_MAP:
-			stData->posX = 200;
-			stData->posY = 200;
+			// Default 
+			stData->posX = 61;
+			stData->posY = 109;
 			stData->data = 1010;
 			stData->direction = 1;
 			send(new MsgAction(stData));
 			break;
+		case MsgAction::ACTION_DESTROY_BOOTH:
+
+			break;
+		case MsgAction::ACTION_JUMP:
+
+			break;
 		default:
+			fprintf(stdout, "[ACTION]Unknown action-%d\n", stData->action);
 			break;
 	}
 
@@ -70,7 +79,7 @@ void session::handler_1052(MsgConnect::MsgInfo *stData)
 	send(msg);
 
 	// MsgDate()
-	msg = new MsgDate();
+	msg = new MsgDate(DatabaseLocal::getDate());
 	send(msg);
 
 	/* Send player data */

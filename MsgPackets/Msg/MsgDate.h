@@ -17,8 +17,17 @@ public:
 		uint32_t second;
 	}MsgInfo;
 
+	typedef struct {
+		uint32_t year;
+		uint32_t month;
+		uint32_t day;
+		uint32_t hour;
+		uint32_t min;
+		uint32_t second;
+	}Date;
+
 public:
-	MsgDate();
+	MsgDate(Date);
 
 	uint8_t *getInfo() { return (uint8_t *)data; }
 	uint16_t getSize() { return size; }

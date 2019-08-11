@@ -1,6 +1,9 @@
 #pragma once
 
 #include <QObject>
+#include <QFile>
+#include <QDebug>
+#include <QDate>
 
 class CharacterLocal
 {

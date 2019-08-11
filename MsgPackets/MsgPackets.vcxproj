@@ -29,9 +29,11 @@
     <ClInclude Include="Msg\MsgItem.h" />
     <ClInclude Include="Msg\MsgLoginChallengeS.h" />
     <ClInclude Include="Msg\MsgLoginProofA.h" />
+    <ClInclude Include="Msg\MsgPlayer.h" />
     <ClInclude Include="Msg\MsgRegister.h" />
     <ClInclude Include="Msg\MsgTalk.h" />
     <ClInclude Include="Msg\MsgUserInfo.h" />
+    <ClInclude Include="Msg\MsgWalk.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Msg\Msg.cpp" />
@@ -43,41 +45,43 @@
     <ClCompile Include="Msg\MsgItem.cpp" />
     <ClCompile Include="Msg\MsgLoginChallengeS.cpp" />
     <ClCompile Include="Msg\MsgLoginProofA.cpp" />
+    <ClCompile Include="Msg\MsgPlayer.cpp" />
     <ClCompile Include="Msg\MsgRegister.cpp" />
     <ClCompile Include="Msg\MsgTalk.cpp" />
     <ClCompile Include="Msg\MsgUserInfo.cpp" />
+    <ClCompile Include="Msg\MsgWalk.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{E4AEE03D-A666-44FA-B6AC-BFA1DC0BE7F6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>MsgPackets</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>

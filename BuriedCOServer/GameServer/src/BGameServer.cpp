@@ -1,4 +1,5 @@
 #include "BGameServer.h"
+#include "DatabaseLocal/Database/DatabaseLocal.h"
 
 DatabaseLocal *BGameServer::db = new DatabaseLocal();
 

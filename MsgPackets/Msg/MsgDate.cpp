@@ -1,8 +1,7 @@
 
 #include "MsgDate.h"
 
-
-MsgDate::MsgDate() :
+MsgDate::MsgDate(Date date) :
 	Msg()
 {
 	//1033
@@ -11,11 +10,11 @@ MsgDate::MsgDate() :
 	data->header.packetID = 1033;
 	data->header.packetSize = size;
 	data->padding = 0;
-	data->year = 2018;
-	data->month = 11;
+	data->year = date.year - 1900;
+	data->month = date.month - 1;
 	data->dayOfYear = 0;
-	data->day = 25;
-	data->hour = 20;
-	data->minute = 35;
-	data->second = 50;
+	data->day = date.day;
+	data->hour = date.hour;
+	data->minute = date.min;
+	data->second = date.second;
 }

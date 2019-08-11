@@ -2,8 +2,6 @@
 
 #include "Common/common.h"
 
-
-
 class Msg {
 
 public:

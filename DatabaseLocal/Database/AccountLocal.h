@@ -2,7 +2,8 @@
 
 #include <QObject>
 #include <QFile>
-
+#include <QDebug>
+#include <QDate>
 #include "CharacterLocal.h"
 
 class AccountLocal 

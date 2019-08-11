@@ -70,3 +70,18 @@ AccountLocal *DatabaseLocal::getByID(uint32_t id)
 	}
 	return nullptr;
 }
+
+MsgDate::Date DatabaseLocal::getDate()
+{
+	MsgDate::Date date;
+	date.year = QDate::currentDate().year();
+	date.month = QDate::currentDate().month();
+	date.day = QDate::currentDate().day();
+	date.hour = QTime::currentTime().hour();
+	date.min = QTime::currentTime().minute();
+	date.second = QTime::currentTime().second();
+	qDebug() << date.year << date.month << date.day;
+	qDebug() << date.hour << date.min << date.second;
+	qDebug() << QDate::currentDate().year() << QDate::currentDate().month() << QDate::currentDate().day();
+	return date;
+}

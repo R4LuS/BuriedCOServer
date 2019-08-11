@@ -8,7 +8,7 @@
 
 #include "session.h"
 
-#include "DatabaseLocal/Database/DatabaseLocal.h"
+#include "World/World.h"
 
 class BGameServer : public QObject
 {
@@ -16,6 +16,7 @@ class BGameServer : public QObject
 public:
 	BGameServer(QObject *parent = 0);
 	static DatabaseLocal *getDB() { return db; }
+	static World *getWorld() { return world; }
 signals:
 
 public slots:
@@ -26,6 +27,9 @@ private:
 	std::vector<session *> sessions;
 
 	static DatabaseLocal *db;
+	static World *world;
 };
 
 #endif // SERVERTEST_H
+
+// 089,041  coords main npc in main map
